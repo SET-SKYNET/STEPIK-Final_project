@@ -1,7 +1,7 @@
 # Dependencies
 from selenium.common.exceptions import NoSuchElementException
 
-# BasePage, that will be inharited
+# BasePage class, that will be inherited
 class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser

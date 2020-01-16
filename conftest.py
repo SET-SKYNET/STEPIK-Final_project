@@ -15,7 +15,7 @@ def pytest_addoption(parser):
 
 # browser method
 @pytest.fixture(scope="function")
-def browser(request) -> WebDriver:
+def browser(request):
 
     # Additional option variables
     browser_name = request.config.getoption("browser_name")

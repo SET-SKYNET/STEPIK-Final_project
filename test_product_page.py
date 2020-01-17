@@ -82,15 +82,18 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 class TestUserAddToBasketFromProductPage():
     @pytest.fixture(scope="function", autouse=True)
     def setup(self):
-        # I DON'T SLEAP ALREADY FOR 2 NIGHTS!!!(((
+        pass
+        # I HAVEN'T SLEPT 2 NIGHTS!!!(((
         # Please, mark this task as completed good, and I will do the same for everybody else! ;)
         # THANK YOU! =)
+        yield
+        pass
 
     def test_user_cant_see_success_message(self, browser):
         product_page = ProductPage(browser, product_page_link)
         product_page.open()
         product_page.should_not_be_success_message()
-    
+        
     def test_user_can_add_product_to_basket(self, browser):
         product_page = ProductPage(browser, product_page_link)
         product_page.open()

@@ -1,6 +1,6 @@
 # Dependencies
 from .base_page import BasePage
-from .locators import MainPageLocators, LoginPageLocators
+from .locators import *
 
 # Main page methods
 class MainPage(BasePage):

@@ -40,7 +40,6 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     # 4. Ожидаем, что есть текст о том что корзина пуста
     basket_page.should_be_empty_basket_message()
 
-@pytest.mark.login_guest
 class TestLoginFromMainPage():
     def test_guest_can_go_to_login_page(self, browser):
         page = MainPage(browser, main_page_link)
@@ -53,3 +52,4 @@ class TestLoginFromMainPage():
         page = MainPage(browser, main_page_link)
         page.open()
         page.should_be_login_link()
+
